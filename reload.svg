@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="30cm" height="10cm" viewBox="111 107 592 182" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #bfbfbf" x="258.352" y="108.998" width="149" height="43" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #bfbfbf" x="258.352" y="108.998" width="149" height="43" rx="10" ry="10"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="332.852" y="134.736">
+    <tspan x="332.852" y="134.736">fuse_kafka.py</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="332.852" y="134.923">
+    <tspan x="332.852" y="134.923"></tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x1="113" y1="132" x2="247.616" y2="131.08"/>
+    <polygon style="fill: #000000" points="255.115,131.029 245.15,136.097 247.616,131.08 245.081,126.097 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="255.115,131.029 245.15,136.097 247.616,131.08 245.081,126.097 "/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="185.176" y="127.932">
+    <tspan x="185.176" y="127.932">service</tspan>
+    <tspan x="185.176" y="143.932">fuse_kafka reload</tspan>
+  </text>
+  <g>
+    <rect style="fill: #add8e6" x="251" y="236" width="166" height="32"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #add8e6" x="251" y="236" width="166" height="32"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="334" y="256.425">
+    <tspan x="334" y="256.425">/var/run/fuse_kafka.args</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="333.096" y1="152.984" x2="333.894" y2="226.265"/>
+    <polygon style="fill: #000000" points="333.976,233.764 328.867,223.819 333.894,226.265 338.867,223.71 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="333.976,233.764 328.867,223.819 333.894,226.265 338.867,223.71 "/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="333.548" y="190.917">
+    <tspan x="333.548" y="190.917"> writes</tspan>
+    <tspan x="333.548" y="206.917"> arguments</tspan>
+  </text>
+  <g>
+    <rect style="fill: #90ee90" x="553.9" y="245.1" width="149" height="43" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #4d4d4d" x="553.9" y="245.1" width="149" height="43" rx="10" ry="10"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="628.4" y="271.025">
+    <tspan x="628.4" y="271.025"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #90ee90" x="544.9" y="232.1" width="149" height="43" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #4d4d4d" x="544.9" y="232.1" width="149" height="43" rx="10" ry="10"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="619.4" y="250.025">
+    <tspan x="619.4" y="250.025">fuse_kafka</tspan>
+    <tspan x="619.4" y="266.025">process</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="619.4" y="258.025">
+    <tspan x="619.4" y="258.025"></tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x1="546" y1="252" x2="426.736" y2="252"/>
+    <polygon style="fill: #000000" points="419.236,252 429.236,247 426.736,252 429.236,257 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="419.236,252 429.236,247 426.736,252 429.236,257 "/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="485" y="247.425">
+    <tspan x="485" y="247.425">reload</tspan>
+    <tspan x="485" y="263.425">configuration</tspan>
+  </text>
+</svg>

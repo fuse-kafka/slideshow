@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html style=height: 100%;><head>
+        <title>impress_arrows</title>
+        <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+        <link rel=stylesheet type=text/css href=impress_arrows.css>
+    <body>
+        <div id=impress>
+            <div id=done class=step></div>
+            <div class="step" data-scale=3 data-y=-50 data-x=-10>HTTP</div>
+            <div class="step box" data-x=-650>
+                FilesOverKafkaClient service
+                <div class="blue box">
+                    Reverse Proxy
+                </div>
+            </div>
+            <div class=arrow></div>
+            <div class="step box" data-x=650>
+                MonitoringBroker service
+                <div class=green box>
+                    FilesOverKafka-V1 resource
+                </div>
+            </div>
+        </div>
+        <script type=text/javascript src=jquery-1.11.0.min.js>
+        </script>
+        <script type=text/javascript src=impress_arrows.js>
+        </script>
+        <script type=text/javascript src=impress.js></script>
+        <script>
+impress_arrows().init();
+impress().init();
+        </script>
+</body></html>
+

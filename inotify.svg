@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="30cm" height="8cm" viewBox="113 60 591 158" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <ellipse style="fill: #e07171" cx="161.4" cy="150.02" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="161.4" cy="150.02" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="161.4" y="154.445">
+    <tspan x="161.4" y="154.445">Process</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #88c3d4" cx="330.344" cy="138.858" rx="77.575" ry="77.7578"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="330.344" cy="138.858" rx="77.575" ry="77.7578"/>
+  </g>
+  <g>
+    <ellipse style="fill: #bfbfbf" cx="509.696" cy="139.263" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="509.696" cy="139.263" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="509.696" y="127.688">
+    <tspan x="509.696" y="127.688">Overlay</tspan>
+    <tspan x="509.696" y="143.688">Input</tspan>
+    <tspan x="509.696" y="159.688">Plugin</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #e07171" cx="328.344" cy="113.858" rx="58.425" ry="34.1422"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="328.344" cy="113.858" rx="58.425" ry="34.1422"/>
+  </g>
+  <g>
+    <ellipse style="fill: #90ee90" cx="328.319" cy="110.758" rx="22.6" ry="22.6"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="328.319" cy="110.758" rx="22.6" ry="22.6"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="328.319" y="115.183">
+    <tspan x="328.319" y="115.183">EXT3</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #90ee90" cx="335.608" cy="178.804" rx="22.6" ry="22.6"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="335.608" cy="178.804" rx="22.6" ry="22.6"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="335.608" y="183.042">
+    <tspan x="335.608" y="183.042">Inotify</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 368.79,175.651 A 567.311,567.311 0 0 0 465.131,155.011"/>
+    <polygon style="fill: #000000" points="361.343,176.535 370.752,170.496 368.8,175.734 371.82,180.439 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="361.343,176.535 370.752,170.496 368.8,175.734 371.82,180.439 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="269.919" y="118.096">
+    <tspan x="269.919" y="118.096"> VFS</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="328.951" y="76.2278">
+    <tspan x="328.951" y="76.2278">kernel</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="228" y="158.425">
+    <tspan x="228" y="158.425">fs</tspan>
+    <tspan x="228" y="174.425">call</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #90ee90" cx="657.044" cy="139.957" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="657.044" cy="139.957" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="657.044" y="144.382">
+    <tspan x="657.044" y="144.382">Kafka</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 623.858,95.8192 A 76.6842,76.6842 0 0 0 535.372,100.996"/>
+    <polygon style="fill: #000000" points="629.996,100.036 619.086,97.5922 624.184,95.2969 625.406,89.842 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="629.996,100.036 619.086,97.5922 624.184,95.2969 625.406,89.842 "/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="586.414" y="80.1199">
+    <tspan x="586.414" y="80.1199">if fs call</tspan>
+    <tspan x="586.414" y="96.1199">is write()</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 208.594,154.974 A 193.772,193.772 0 0 0 300.894,129.654"/>
+    <polygon style="fill: #000000" points="307.339,125.836 301.594,135.427 301.015,129.867 296.219,126.994 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="307.339,125.836 301.594,135.427 301.015,129.867 296.219,126.994 "/>
+  </g>
+</svg>

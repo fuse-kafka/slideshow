@@ -1,0 +1,11 @@
+---
+Blocks:
+    Producer:
+        image: UML-Actor.svg 
+    FilesOverKafkaClient Service:
+        ReverseProxy VM:
+            ReverseProxy:
+                ReverseProxyPath /upload
+    MonitoringBrokerService:
+        
+

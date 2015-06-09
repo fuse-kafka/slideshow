@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="29cm" height="9cm" viewBox="213 373 574 175" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="488.174" y="386.038">
+    <tspan x="488.174" y="386.038">should write to kafka?</tspan>
+  </text>
+  <g>
+    <rect style="fill: #7f7f7f" x="296.712" y="374.138" width="382.924" height="117.731" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #bfbfbf" x="296.712" y="374.138" width="382.924" height="117.731" rx="10" ry="10"/>
+  </g>
+  <g>
+    <rect style="fill: #bfbfbf" x="316.8" y="417.036" width="149" height="43" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #bfbfbf" x="316.8" y="417.036" width="149" height="43" rx="10" ry="10"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="391.3" y="442.961">
+    <tspan x="391.3" y="442.961">has excluded path?</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="391.3" y="442.961">
+    <tspan x="391.3" y="442.961"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #bfbfbf" x="517.24" y="417.514" width="149" height="43" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #bfbfbf" x="517.24" y="417.514" width="149" height="43" rx="10" ry="10"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="591.74" y="443.439">
+    <tspan x="591.74" y="443.439">overrides quota?</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="591.74" y="443.439">
+    <tspan x="591.74" y="443.439"></tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #90ee90" cx="484.001" cy="525.686" rx="22.2976" ry="20.8111"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #90ee90" cx="484.001" cy="525.686" rx="22.2976" ry="20.8111"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="484.001" y="530.111">
+    <tspan x="484.001" y="530.111">No</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #90ee90" cx="763.215" cy="436.96" rx="22.2976" ry="20.8111"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #90ee90" cx="763.215" cy="436.96" rx="22.2976" ry="20.8111"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="763.215" y="441.385">
+    <tspan x="763.215" y="441.385">Yes</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #000000" d="M 667.247,439.515 A 2580.49,2580.49 0 0 0 730.211,438.242"/>
+    <polygon style="fill: #000000" points="737.707,437.989 727.895,443.347 730.212,438.26 727.533,433.354 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="737.707,437.989 727.895,443.347 730.212,438.26 727.533,433.354 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 398.596,461.033 A 111.178,111.178 0 0 0 452.581,516.19"/>
+    <polygon style="fill: #000000" points="459.433,519.177 448.32,520.397 452.399,516.574 451.789,511.018 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="459.433,519.177 448.32,520.397 452.399,516.574 451.789,511.018 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 550.313,412.384 A 149.566,149.566 0 0 0 424.26,416.074"/>
+    <polygon style="fill: #000000" points="557.122,415.496 545.942,415.415 550.438,412.093 550.479,406.503 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="557.122,415.496 545.942,415.415 550.438,412.093 550.479,406.503 "/>
+  </g>
+  <g>
+    <ellipse style="fill: #add8e6" cx="233.376" cy="431.739" rx="19.0273" ry="19.0273"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #add8e6" cx="233.376" cy="431.739" rx="19.0273" ry="19.0273"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="233.376" y="436.164">
+    <tspan x="233.376" y="436.164">event</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 253.259,434.116 A 909.441,909.441 0 0 0 306.073,438.291"/>
+    <polygon style="fill: #000000" points="313.565,438.636 303.378,443.242 306.071,438.343 303.768,433.249 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="313.565,438.636 303.378,443.242 306.071,438.343 303.768,433.249 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="488.174" y="386.038">
+    <tspan x="488.174" y="386.038">should write to kafka?</tspan>
+  </text>
+</svg>

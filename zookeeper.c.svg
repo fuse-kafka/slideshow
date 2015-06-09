@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="16cm" height="12cm" viewBox="136 10 317 224" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <ellipse style="fill: #88c3d4" cx="188.5" cy="188.5" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="188.5" cy="188.5" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="188.5" y="192.925">
+    <tspan x="188.5" y="192.925">Kafka</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #bfbfbf" cx="401.4" cy="181.6" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="401.4" cy="181.6" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="401.4" y="186.025">
+    <tspan x="401.4" y="186.025">Zookeeper</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #e07171" cx="294.4" cy="55.6" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="294.4" cy="55.6" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="294.4" y="60.025">
+    <tspan x="294.4" y="60.025">fuse_kafka</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 234.272,200.585 A 293.588,293.588 0 0 0 347.087,198.787"/>
+    <polygon style="fill: #000000" points="354.401,197.144 345.894,204.399 347.12,198.945 343.493,194.691 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="354.401,197.144 345.894,204.399 347.12,198.945 343.493,194.691 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 385.48,138.773 A 180.781,180.781 0 0 0 342.619,85.0903"/>
+    <polygon style="fill: #000000" points="336.828,80.3397 347.81,82.4339 342.789,84.891 341.742,90.3822 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="336.828,80.3397 347.81,82.4339 342.789,84.891 341.742,90.3822 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 254.653,80.4644 A 190.483,190.483 0 0 0 207.8,136.634"/>
+    <polygon style="fill: #000000" points="204.313,143.265 204.171,132.085 207.582,136.514 213.172,136.443 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="204.313,143.265 204.171,132.085 207.582,136.514 213.172,136.443 "/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="294" y="181.425">
+    <tspan x="294" y="181.425">1. write address</tspan>
+    <tspan x="294" y="197.425">/brokers/ids/0</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="410" y="101.425">
+    <tspan x="410" y="101.425">2./brokers/ids</tspan>
+    <tspan x="410" y="117.425">changed</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="186" y="93.425">
+    <tspan x="186" y="93.425">3.  start writing</tspan>
+    <tspan x="186" y="109.425">to kafka</tspan>
+  </text>
+</svg>

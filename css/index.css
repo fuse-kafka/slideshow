@@ -1,0 +1,40 @@
+body {
+    font-family: Helvetica, Arial, Sans-Serif;
+    color: black;
+    background-color: black;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#camus_1 {
+    position: relative;
+    top: -500px;
+}
+#dom_juan {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.lined_paper {
+    background-color: #fff; 
+    background-image: 
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+}
+.shadowed {
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.8));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+    Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+    Color='#444')";
+}
+.references {
+    font-width: bold;
+}

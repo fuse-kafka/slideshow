@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="29cm" height="8cm" viewBox="338 312 571 145" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <ellipse style="fill: #e07171" cx="386.375" cy="384.6" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="386.375" cy="384.6" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="386.375" y="388.838">
+    <tspan x="386.375" y="388.838">FS</tspan>
+  </text>
+  <g>
+    <rect style="fill: #90ee90" x="501" y="314" width="236" height="142" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #90ee90" x="501" y="314" width="236" height="142" rx="10" ry="10"/>
+  </g>
+  <g>
+    <ellipse style="fill: #88c3d4" cx="543.4" cy="383.6" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #000000" cx="543.4" cy="383.6" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="543.4" y="363.838">
+    <tspan x="543.4" y="363.838">Overlay</tspan>
+    <tspan x="543.4" y="379.838">Input Plugin</tspan>
+    <tspan x="543.4" y="395.838">(shared</tspan>
+    <tspan x="543.4" y="411.838">library)</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #bfbfbf" cx="695.4" cy="384.6" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #000000" cx="695.4" cy="384.6" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="695.4" y="388.838">
+    <tspan x="695.4" y="388.838">librdkafka</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #e07171" cx="861.4" cy="385.6" rx="46.5" ry="44.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #000000" cx="861.4" cy="385.6" rx="46.5" ry="44.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="861.4" y="389.838">
+    <tspan x="861.4" y="389.838">Kafka</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x1="495.902" y1="384.03" x2="442.611" y2="384.512"/>
+    <polygon style="fill: #000000" points="435.111,384.58 445.065,379.49 442.611,384.512 445.156,389.489 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="435.111,384.58 445.065,379.49 442.611,384.512 445.156,389.489 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="742.908" y1="384.886" x2="804.156" y2="385.255"/>
+    <polygon style="fill: #000000" points="811.656,385.3 801.626,390.24 804.156,385.255 801.686,380.24 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="811.656,385.3 801.626,390.24 804.156,385.255 801.686,380.24 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="586.15" y1="383.881" x2="642.914" y2="384.255"/>
+    <polygon style="fill: #000000" points="650.414,384.304 640.381,389.238 642.914,384.255 640.447,379.238 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="650.414,384.304 640.381,389.238 642.914,384.255 640.447,379.238 "/>
+  </g>
+</svg>

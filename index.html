@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>fuse_kafka</title>
+		<link rel="stylesheet"
+        href="css/reveal.css">
+        <link rel="stylesheet" id="theme"
+        href="css/theme/black.css">
+        <link rel="stylesheet"
+        href="lib/css/zenburn.css">
+        <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <style>
+.snapshot {
+}
+.rounded {
+    border-radius: 50px;
+}
+#xml_delimiter {
+    color: blue;
+}
+#xml_name {
+    color: orange;
+}
+#xml_parameter {
+    color: green;
+}
+#xml_value {
+    color: red;
+}
+.noborder {
+    border: 0;
+}
+        </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+<!--
+                <section data-background=fuse_kafka_logo.png>
+                    <h1>Fuse Kafka</h1>
+                    <div class=fragment>
+                        <p>a logging agent</p>
+                    </div>
+                </section>
+                <section>
+                    <h2>FUSE</h2>
+                    <iframe data-src=fuse.html
+                        height=300 width=1200></iframe>
+                </section>
+                <section>
+                    <h2>librdkafka</h2>
+                    <a href=https://github.com/edenhill/librdkafka>Github</a>
+                    <br/>Gitter:<br/>
+                    <iframe src=https://gitter.im/edenhill/librdkafka
+                        height=300 width=1200></iframe>
+                </section>
+                <section>
+                    <h2>fuse_kafka.py (init)</h2>
+                    <ul>
+                        <li>status</li>
+                        <li>start</li>
+                        <li>stop</li>
+                        <li>restart</li>
+                        <li>reload</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>fuse_kafka.py (config parsing)</h2>
+<pre><code data-trim>
+variable=["value"] 
+list=["a", "b", "c"]
+hash={"key1": "val1", "key2": "val2"}
+</code></pre>
+becomes
+<pre><code data-trim>
+--variable value --list a b c --hash key1 value1 key2 value2
+</code></pre>
+                </section>
+                <section>
+                    <h2>zookeeper.c</h2>
+<img src=zookeeper.c.svg style="border: 0;" width=50%/>
+<pre><code data-trim>
+$ ./zookeeper-shell.sh $zookeeper_address
+-> ls /brokers/ids
+[0, 1]
+-> get /brokers/ids/0
+{"host":"42.42.42.42","port":9092, [...]}
+</code data-trim></pre>
+                </section>
+<section>
+                    <h2>server_list.c</h2>
+<img src=TCP_leak.png width=50%/>
+<pre><code data-trim>
++        if (brokers[0] != '\0' && k->rk != NULL &&
++                server_list_add_once(&(k->broker_list), brokers))
+         {
+             rd_kafka_brokers_add(k->rk, brokers);
+</code data-trim></pre>
+</section>
+                <section>
+                    <h2>output.c</h2>
+                        1. initializes librdkafka producer<br/>
+                        2. <br/> <img src=should_write_to_kafka.svg style="border: 0;" width=60%/><br/>
+                        3. writes event: <pre><code data-trim>
+{"path": "/tmp/fuse-kafka-test/blah", "pid": 0, "uid": 0,
+ "gid": 0, "@message": "dGVzdAoA",
+ "@timestamp": "2015-06-08T15:17:08.000+0000",
+ "user": "root", "group": "root", "command": "dGVzdAoA",
+ "@version": "0.1.5",
+ "@fields": {"hostname": "test"}, "@tags": ["test"]}
+                        </code data-trim></pre>
+                </section>
+                <section>
+                    <h2>dynamic_configuration.c</h2>
+                    <img src=reload.svg style="border: 0;" width=80%/>
+<pre><code data-trim>
+$ cat /var/run/fuse_kafka.args 
+--zookeepers 127.0.0.1:2181 --directories /tmp/fuse-kafka-test \
+--topic logs --tags test --quota 500000 \
+--input inotify --fields hostname test
+</code data-trim></pre>
+                </section>
+                <section>
+                    <h2>plugins/input</h2>
+                    <img src=plugin.svg style="border: 0;" width=80%/><br/>
+                    entry point:<br/>
+<pre><code data-trim>
+int input_setup(int argc, char** argv, void* conf)
+</code data-trim></pre>
+                    should call:<br/>
+<pre><code data-trim>
+void output_write(const char *path, const char *buf,
+        size_t size, off_t offset)
+</code data-trim></pre>
+                </section>
+                <section>
+                    <h2>overlay.c</h2>
+                    <img src=overlay.svg style="border: 0;" width=80%/><br/>
+                    <table>
+                        <tr>
+                            <td>benefits</td>
+                            <td>drawbacks</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>can disable write</li>
+                                    <li>get writing process info</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>overhead (more computing, 6 commutations vs 2)</li>
+                                    <li>fuse_kafka must be absolutely stable</li>
+                                    <li>can lose FD on restart</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2>inotify.c</h2>
+                    <img src=inotify.svg style="border: 0;" width=80%/><br/>
+                    <table>
+                        <tr>
+                            <td>benefits</td>
+                            <td>drawbacks</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>low coupling</li>
+                                    <li>do not limit FS access</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>adds file read</li>
+                                    <li>no write but cleanup could be triggered</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2>inotify.c</h2>
+                    perf test
+                </section>
+                <section>
+                    <h2>fabricate.py</h2>
+                    <table>
+                        <tr><td width=62%>
+<pre><code data-trim>
+#!/bin/env python
+from fabricate import *
+src = ['program', 'util']
+def build():
+  compile() and link()
+def compile():
+  for source in src:
+    run('gcc', '-c', source+'.c')
+def link():
+  objects = [s+'.o' for s in src]
+  run('gcc', '-o', 'program', objects)
+def clean():
+  autoclean()
+main()
+</code data-trim></pre>
+</td><td>
+    program.c<br/>
+<pre><code data-trim>
+int main()
+{
+  return util();
+}
+</code data-trim></pre>
+    util.c<br/>
+<pre><code data-trim>
+int util()
+{
+  return 0;
+}
+</code data-trim></pre>
+</td></tr>
+<tr><td width=62%>
+<pre><code data-trim>
+➜ ./build.py
+gcc -c program.c
+gcc -c util.c
+gcc -o program program.o util.o
+</code data-trim></pre>
+</td><td>
+<pre><code data-trim>
+➜ ./build.py clean
+deleting program
+deleting util.o
+deleting program.o
+deleting .deps
+</code data-trim></pre>
+</td></tr>
+</table>
+                </section>
+                <section>
+                    <h2>test.c and plugins/*/*_test.c</h2>
+minunit
+<pre><code data-trim>
+#define mu_assert(message, test) do { if (!(test)) return message; } while (0)
+#define mu_run_test(test) do { char *message = test(); tests_run++; \
+        if (message) return message; } while (0)
+extern int tests_run;
+</code data-trim></pre>
+code coverage gcov and lcov (100% line)
+                </section>
+                -->
+                <section>
+                    <h2>fuse_kafka_test.py</h2>
+                    <ul>
+                        <li>unittest</li>
+                        <li>tox to test multiple versions, based on virtualenv</li>
+                    </ul>
+                    <h3>tox.ini</h3>
+<pre><code data-trim>
+[tox]
+skipsdist=True
+envlist = py26,py27,py33,py34
+[testenv]
+commands=python src/fuse_kafka_test.py
+</code data-trim></pre>
+                </section>
+                <section>
+                    <h2>.travis.yml (CI)</h2>
+                                <img src=travis_ci.png width=10% style="border: 0;"/>
+                                <img src=dockerhub.svg style="border: 0;"/>
+                                <img src=shippable.png width=18% style="border: 0;"/>
+                                <img src=coverall.png style="border: 0;"/>
+<pre><code data-trim>
+$ # install prerequisites
+$ ./build.py # compile the project
+$ ./build.py test # compile and run unit tests
+$ tox # run python unit test on multiple python versions
+$ sudo ./build.py install # 
+$ coveralls
+$ ./build.py doc # and commit coverage to gh-pages
+$ # commit container yazgoo/fuse_kafka
+$ # gitter webhook
+</code data-trim></pre>
+                </section>
+                <section>
+                    <h2>mininet</h2>
+                    describe
+                    example
+                </section>
+                <section>
+                    <h2>benchs</h2>
+                </section>
+                <section>
+                    <h2>linux packaging</h2>
+                    OBS
+                    show link
+                </section>
+                <section>
+                    <h2>todo</h2>
+                    <ul>
+                        <li>packaging fuse_kafka (at least for CentOS) without OBS</li>
+                        <li>finish inotify plugin</li>
+                        <li>100% branch coverage in C</li>
+                        <li>windows equivalent to inotify</li>
+                        <li>output plugins</li>
+                        <li>logstash compatibility via mruby</li>
+                    </ul>
+                </section>
+                <section data-background=fuse_kafka_logo.png>
+                    Thanks
+                </section>
+			</div>
+		</div>
+        <script src="js/head.min.js">
+        </script>
+		<script src="js/reveal.js">
+        </script>
+		<script>
+Reveal.initialize({
+controls: true,
+loop: true,
+transition: 'convex',
+margin: 0,
+dependencies: [
+        { src: 'plugin/highlight/highlight.js', async: true, callback:
+        function() { hljs.initHighlightingOnLoad(); } }
+        ]
+});
+        </script>
+	</body>
+</html>
