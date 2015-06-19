@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="35cm" height="9cm" viewBox="72 41 684 176" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #1e90ff" x="256" y="101" width="108" height="70"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" x="256" y="101" width="108" height="70"/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="310" y="140.425">
+    <tspan x="310" y="140.425">audit.log</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #3f933f" cx="127.5" cy="130.5" rx="54.5" ry="58.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" cx="127.5" cy="130.5" rx="54.5" ry="58.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="127.5" y="134.925">
+    <tspan x="127.5" y="134.925">auditd</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #7f7f7f" cx="480.4" cy="131.6" rx="54.5" ry="58.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" cx="480.4" cy="131.6" rx="54.5" ry="58.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="480.4" y="136.025">
+    <tspan x="480.4" y="136.025">fuse_kafka</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #ffa500" cx="700.4" cy="131.6" rx="54.5" ry="58.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" cx="700.4" cy="131.6" rx="54.5" ry="58.5"/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="700.4" y="136.025">
+    <tspan x="700.4" y="136.025">inotify</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 288.139,92.6333 A 93.8808,93.8808 0 0 0 159.42,81.8471"/>
+    <polygon style="fill: #000000" points="292.905,98.3794 282.998,93.1972 288.515,92.2981 291.106,87.3447 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="292.905,98.3794 282.998,93.1972 288.515,92.2981 291.106,87.3447 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="53.425">
+    <tspan x="212" y="53.425">1. writes</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 659.39,91.5074 A 131.194,131.194 0 0 0 529.858,86.7077"/>
+    <polygon style="fill: #000000" points="523.312,90.3316 529.188,80.8201 529.691,86.3876 534.447,89.3258 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="523.312,90.3316 529.188,80.8201 529.691,86.3876 534.447,89.3258 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="584" y="54.425">
+    <tspan x="584" y="54.425">2. notifies</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 451.226,81.0479 A 86.227,86.227 0 0 0 328.885,92.177"/>
+    <polygon style="fill: #000000" points="324.384,98.1241 325.624,87.0128 328.461,91.8294 334.017,92.4495 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="324.384,98.1241 325.624,87.0128 328.461,91.8294 334.017,92.4495 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="394" y="54.425">
+    <tspan x="394" y="54.425">3. reads</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" d="M 159.072,179.436 A 95.348,95.348 0 0 0 281.093,178.598"/>
+    <polygon style="fill: #ffffff" points="286.622,173.581 283.273,184.248 281.412,178.977 276.079,177.303 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" points="286.622,173.581 283.273,184.248 281.412,178.977 276.079,177.303 "/>
+  </g>
+  <text font-size="12.8" style="fill: #ffffff;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="224" y="213.238">
+    <tspan x="224" y="213.238">4. writes about 3</tspan>
+  </text>
+</svg>

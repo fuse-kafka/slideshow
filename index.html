@@ -57,6 +57,13 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     </div>
                 </section>
                 <section>
+                    <h2>Goal</h2>
+                    <ul>
+                        <li>centralize file based logs to kafka</li>
+                        <li>logging system agnostic</li>
+                    </ul>
+                </section>
+                <section>
                     <h2>FUSE</h2>
                     <iframe data-src=fuse.html#/driver_process
                         height=500 width=1200></iframe>
@@ -281,6 +288,7 @@ void output_write(const char *path, const char *buf,
                                     <li>low coupling</li>
                                     <li>do not limit FS access</li>
                                     <li>can “slurp” events at once</li>
+                                    <li>only write access necessary</li>
                                 </ul>
                             </td>
                             <td>
@@ -317,6 +325,24 @@ end
 ➜ pr -m -t /tmp/write_tests.overlay /tmp/write_tests.inotify|head -1
 duration: 3.369285642               duration: 3.104738855
 </code data-trim></pre>
+                </section>
+                <section>
+                    <h2>inotify and audit.log</h2>
+<pre><code data-trim>
+➜ cd /usr/local/kafka-broker/linux_a64/resources/kafka-logs/logs-1
+➜ strings *00000.log|wc -l
+78616
+➜ strings *00000.log|grep audit.log|wc -l
+74261
+➜ strings *00000.log|grep audit.log|\
+    grep $(base64 <(echo fuse_kafka)|sed 's/...$//')|wc -l
+19225
+➜ grep audit.*log /etc/audit/audit.rules 
+## Audit the audit logs.
+-w /var/log/audit/ -k auditlog
+</code data-trim></pre>
+                    <a href=http://people.redhat.com/sgrubb/audit/>auditd</a> log system usage (FS access, cmds via kernel hooks)
+<img src=auditd.svg width=700 style=border:0;/>
                 </section>
                 <section>
                     <h2>test.c and plugins/*/*_test.c</h2>
@@ -472,9 +498,10 @@ commands=python src/fuse_kafka_test.py
                         <img src=readme.md.png style="border:0;"/>
                     </a>
                 </section>
-                <section data-background=fuse_kafka_logo.png>
-                    Thanks
-                    https://github.com/yazgoo
+                <section data-background=>
+                    <h2>Thanks</h2>
+                    <img src=https://pbs.twimg.com/media/ByVHvqHIcAIvQqi.png:large style=border:0;/>
+                    <a href=https://github.com/yazgoo>https://github.com/yazgoo</a>
                 </section>
 			</div>
 		</div>
