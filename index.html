@@ -159,7 +159,17 @@ fuse_kafka stoped
 starting fuse_kafka on /tmp/fuse-kafka-test
 </code data-trim></pre>
                 </section>
-                <section data-transition="none">
+                <section>
+                    <h2>dynamic_configuration.c</h2>
+                    <img src=reload.svg style="border: 0;" width=80%/>
+<pre><code data-trim>
+➜ cat /var/run/fuse_kafka.args 
+--zookeepers 127.0.0.1:2181 --directories /tmp/fuse-kafka-test \
+--topic logs --tags test --quota 500000 \
+--input inotify --fields hostname test
+</code data-trim></pre>
+                </section>
+                <section>
                     <h2>fuse_kafka.py (reload)</h2>
 <pre><code data-trim>
 ➜ diff /tmp/conf0 /tmp/conf1
@@ -170,6 +180,9 @@ starting fuse_kafka on /tmp/fuse-kafka-test
 ➜ service fuse_kafka reload
 </code data-trim></pre>
 writes parsed conf to /var/run/fuse_kafka.args
+                </section>
+                <section data-transition="none">
+                    <h2>fuse_kafka.py (reload)</h2>
                     <div style="text-align:left; line-height: 40px;height: 90%;">
                     fuse_kafka<br/>
                     │<br/>
@@ -233,16 +246,6 @@ writes parsed conf to /var/run/fuse_kafka.args
  "@version": "0.1.5",
  "@fields": {"hostname": "test"}, "@tags": ["test"]}
                         </code data-trim></pre>
-                </section>
-                <section>
-                    <h2>dynamic_configuration.c</h2>
-                    <img src=reload.svg style="border: 0;" width=80%/>
-<pre><code data-trim>
-➜ cat /var/run/fuse_kafka.args 
---zookeepers 127.0.0.1:2181 --directories /tmp/fuse-kafka-test \
---topic logs --tags test --quota 500000 \
---input inotify --fields hostname test
-</code data-trim></pre>
                 </section>
                 <section>
                     <h2>plugins/input</h2>
@@ -484,11 +487,9 @@ commands=python src/fuse_kafka_test.py
                         <img src=obs.png style=border:0;/>
                     </a>
                     <br/>
-                    <iframe
-                        src=http://download.opensuse.org/repositories/home:/yazgoo/CentOS-6/x86_64/
-                        width=1200
-                        height=300
-                        ></iframe>
+                    <a href=http://download.opensuse.org/repositories/home:/yazgoo/CentOS-6/x86_64//>
+                        <img src=repo.png/>
+                    </a>
                     <br/>
                     <img src=RHEL.png style=border:0;/>
                     <img src=fedora.png style=border:0;/>
