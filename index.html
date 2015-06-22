@@ -161,6 +161,15 @@ starting fuse_kafka on /tmp/fuse-kafka-test
                 </section>
                 <section data-transition="none">
                     <h2>fuse_kafka.py (reload)</h2>
+<pre><code data-trim>
+➜ diff /tmp/conf0 /tmp/conf1
+1c1
+< fuse_kafka_directories=["/tmp/a", "/tmp/b"]
+---
+> fuse_kafka_directories=["/tmp/a", "/tmp/c"]
+➜ service fuse_kafka reload
+</code data-trim></pre>
+writes parsed conf to /var/run/fuse_kafka.args
                     <div style="text-align:left; line-height: 40px;height: 90%;">
                     fuse_kafka<br/>
                     │<br/>
@@ -202,12 +211,12 @@ starting fuse_kafka on /tmp/fuse-kafka-test
 {"host":"42.42.42.42","port":9092, [...]}
 </code data-trim></pre>
                 </section>
-<section>
+                <section>
                     <h2>server_list.c</h2>
-<img src=TCP_leak.png width=50%/>
+                    <a href=TCP_leak.png><img src=TCP_leak.png width=50%/></a>
 <pre><code data-trim>
-+        if (brokers[0] != '\0' && k->rk != NULL &&
-+                server_list_add_once(&(k->broker_list), brokers))
+         if (brokers[0] != '\0' && k->rk != NULL
++                && server_list_add_once(&(k->broker_list), brokers))
          {
              rd_kafka_brokers_add(k->rk, brokers);
 </code data-trim></pre>
@@ -275,6 +284,12 @@ void output_write(const char *path, const char *buf,
                     </table>
                 </section>
                 <section>
+                    <h2>Benchmarking overlay</h2>
+                    <a href=http://htmlpreview.github.io/?https://raw.githubusercontent.com/yazgoo/fuse_kafka/master/benchs/benchmarks.html>
+                        <img src=bench.png style=border:0; width=40%/>
+                    </a>
+                </section>
+                <section>
                     <h2>inotify.c</h2>
                     <img src=inotify.svg style="border: 0;" width=80%/><br/>
                     <table>
@@ -329,10 +344,9 @@ duration: 3.369285642               duration: 3.104738855
                     <h2>inotify and audit.log</h2>
 <pre><code data-trim>
 ➜ cd /path/to/kafka/logs/logs-1
-➜ echo $[$(strings *00000.log|wc -l)/3]
-26205
-➜ echo $[$(strings *00000.log|grep audit.log|wc -l)/3]
-24753
+➜ strings *00000.log|wc -l && strings *00000.log|grep audit.log|wc -l
+78616
+74261
 ➜ strings *00000.log|grep audit.log|\
     grep $(base64 <(echo fuse_kafka)|sed 's/...$//')|wc -l
 19225
@@ -340,8 +354,12 @@ duration: 3.369285642               duration: 3.104738855
 ## Audit the audit logs.
 -w /var/log/audit/ -k auditlog
 </code data-trim></pre>
-                    <a href=http://people.redhat.com/sgrubb/audit/>auditd</a> log system usage (FS access, cmds via kernel hooks)
-<img src=auditd.svg width=700 style=border:0;/>
+                    <a href=http://people.redhat.com/sgrubb/audit/>auditd</a> logs sensitive syscalls
+<img src=auditd.svg width=500 style=border:0;/>
+<pre><code data-trim>
+➜ auditctl -a exit,always -F path=/var/log/audit.log \
+    -F perm=r -F ppid!=$parent_pid
+</code data-trim></pre>
                 </section>
                 <section>
                     <h2>test.c and plugins/*/*_test.c</h2>
@@ -459,11 +477,6 @@ commands=python src/fuse_kafka_test.py
                         <li>cutting zk: write, h2 down, retrieve - fk, cons already init</li>
                         <li>cutting kafka periodically: h1 down, h1 up, write, consume</li>
                     </ol>
-                </section>
-                <section>
-                    Bench:
-                    <iframe data-src=http://htmlpreview.github.io/?https://raw.githubusercontent.com/yazgoo/fuse_kafka/master/benchs/benchmarks.html#5
-                        height=650 width=1200></iframe>
                 </section>
                 <section>
                     <h2>linux packaging (OBS)</h2>
