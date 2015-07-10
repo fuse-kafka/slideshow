@@ -50,6 +50,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	<body>
 		<div class="reveal">
 			<div class="slides">
+                <!--
                 <section data-background=fuse_kafka_logo.png>
                     <h1>Fuse Kafka</h1>
                     <div class=fragment>
@@ -304,7 +305,7 @@ void output_write(const char *path, const char *buf,
                             <td>
                                 <ul>
                                     <li>low coupling</li>
-                                    <li>do not limit FS access, only read</li>
+                                    <li>do not limit FS access, no fork(), only read access required</li>
                                     <li>can “slurp” events at once</li>
                                 </ul>
                             </td>
@@ -362,6 +363,30 @@ duration: 3.369285642               duration: 3.104738855
 <pre><code data-trim>
 ➜ auditctl -a exit,always -F path=/var/log/audit.log \
     -F perm=r -F ppid!=$parent_pid
+</code data-trim></pre>
+                </section>
+                -->
+                <section>
+                    <h2>windows port</h2>
+                    <ul>
+                        <li>based on <a href=http://mingw.org/>mingw</a> (host: linux), relies on <a href=http://winehq.org>wine</a></li>
+                        <li>modified <a href=https://github.com/yazgoo/librdkafka/tree/win32>librdkafka</a>,
+                        <a href=https://github.com/fuse-kafka/zookeeper/tree/mingw>zookeeper<a></li>
+                        <li>uses <a href=https://github.com/dlfcn-win32/dlfcn-win32>dlfcn-win32</a></li>
+                        <li>automated build: docker (./build.py binary_archive)</li>
+                        <li>input plugin is read_directory_changes</li>
+                    </ul>
+<pre><code data-trim>
+BOOL WINAPI ReadDirectoryChangesW(
+  _In_        HANDLE                          hDirectory,
+  _Out_       LPVOID                          lpBuffer,
+  _In_        DWORD                           nBufferLength,
+  _In_        BOOL                            bWatchSubtree,
+  _In_        DWORD                           dwNotifyFilter,
+  _Out_opt_   LPDWORD                         lpBytesReturned,
+  _Inout_opt_ LPOVERLAPPED                    lpOverlapped,
+  _In_opt_    LPOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+);
 </code data-trim></pre>
                 </section>
                 <section>
