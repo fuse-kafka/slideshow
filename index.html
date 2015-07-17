@@ -61,7 +61,12 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <ul>
                         <li>centralize file based logs to kafka</li>
                         <li>logging system agnostic</li>
+                        <li>being more lightweight than logstash</li>
                     </ul>
+                </section>
+                <section>
+                    <h2>Overview</h2>
+                    <img src=overview.svg style=border:0;/>
                 </section>
                 <section>
                     <h2>FUSE</h2>
@@ -388,6 +393,20 @@ BOOL WINAPI ReadDirectoryChangesW(
 </code data-trim></pre>
                 </section>
                 <section>
+                    <h2>machine tail</h2>
+
+                    <pre><code data-trim>
+➜ fuse_kafka -- --directories /var/log \
+    --output stdout --input inotify --encoder text
+
+2015-07-17T13:34:01.000+0200: /var/log/auth.log: Jul 17 13:34:01 yazgoo-ThinkPad-X240 CRON[31370]: pam_unix(cron:session): session opened for user yazgoo by (uid=0)
+2015-07-17T13:34:01.000+0200: /var/log/syslog: Jul 17 13:34:01 yazgoo-ThinkPad-X240 CRON[31371]: (yazgoo) CMD (echo * >/tmp/xd)
+2015-07-17T13:34:01.000+0200: /var/log/auth.log: Jul 17 13:34:01 yazgoo-ThinkPad-X240 CRON[31370]: pam_unix(cron:session): session closed for user yazgoo
+                    </code data-trim></pre>
+                    can be used to tail -f directories via stdout output plugin.
+
+                </section>
+                <section>
                     <h2>test.c and plugins/*/*_test.c</h2>
 minunit
 <pre><code data-trim>
@@ -505,27 +524,26 @@ commands=python src/fuse_kafka_test.py
                     </ol>
                 </section>
                 <section>
-                    <h2>linux packaging (OBS)</h2>
+                    <h2>linux packaging</h2>
                     <a href=https://build.opensuse.org/project/show/home:yazgoo>
                         <img src=obs.png style=border:0;/>
                     </a>
                     <br/>
                     <a href=http://download.opensuse.org/repositories/home:/yazgoo/CentOS-6/x86_64//>
-                        <img src=repo.png />
+                        <img src=repo.png  width=40%/>
                     </a>
                     <br/>
                     <img src=RHEL.png style=border:0;/>
                     <img src=fedora.png style=border:0;/>
                     <img src=centos.png style=border:0;/>
+                    <br/>
+                    Also, running "./build.py rpm" via <a href=https://github.com/yazgoo/fuse_kafka/blob/master/docker/rpmbuild.dockerfile>docker</a> (CentOS)
                 </section>
                 <section>
                     <div  class=lined_paper style="padding-left: 80px;">
                         <h2 style="color: #444444;">todo</h2>
                         <ul>
-                            <li>packaging fuse_kafka (at least for CentOS) without OBS</li>
                             <li>100% branch coverage in C</li>
-                            <li>windows equivalent to inotify</li>
-                            <li>output plugins</li>
                             <li>logstash compatibility via mruby</li>
                         </ul>
                     </div>
